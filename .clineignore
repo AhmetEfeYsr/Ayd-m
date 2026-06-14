@@ -1,0 +1,12 @@
+pnpm-lock.yaml
+packages/database/drizzle/meta/
+*.png
+*.ico
+*.icns
+*.ttf
+tsconfig.tsbuildinfo
+.turbo/
+.next/
+dist/
+node_modules/
+.git/

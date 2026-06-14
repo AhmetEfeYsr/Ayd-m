@@ -1,0 +1,15 @@
+{
+  "name": "yks-platform",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.9",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^8.0.0",
+    "nodemailer": "^8.0.10",
+    "turbo": "^2.5.0"
+  }
+}

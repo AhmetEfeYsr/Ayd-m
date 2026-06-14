@@ -1,0 +1,78 @@
+service: yks-cloud-workers
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: eu-central-1 # Frankfurt region (close to Turkey)
+  stage: ${opt:stage, 'prod'}
+  memorySize: 512
+  timeout: 30 # default timeout
+  environment:
+    DATABASE_URL: ${env:DATABASE_URL}
+    GEMINI_API_KEY: ${env:GEMINI_API_KEY}
+    MASTER_SALT: ${env:MASTER_SALT}
+    CLOUDFLARE_ACCOUNT_ID: ${env:CLOUDFLARE_ACCOUNT_ID}
+    R2_ACCESS_KEY_ID: ${env:R2_ACCESS_KEY_ID}
+    R2_SECRET_ACCESS_KEY: ${env:R2_SECRET_ACCESS_KEY}
+    TELEGRAM_BOT_TOKEN: ${env:TELEGRAM_BOT_TOKEN}
+    SMS_API_ENDPOINT: ${env:SMS_API_ENDPOINT}
+    SMS_API_USER: ${env:SMS_API_USER}
+    SMS_API_PASS: ${env:SMS_API_PASS}
+    MODEL_PRO: ${env:MODEL_PRO, 'gemini-3.1-pro'}
+
+plugins:
+  - serverless-esbuild
+
+custom:
+  esbuild:
+    bundle: true
+    minify: true
+    sourcemap: true
+    exclude: ['pg-native'] # Exclude optional native dependency of pg client
+
+functions:
+  sendSms:
+    handler: src/lambda-handlers.handleSendSms
+    timeout: 30
+    events:
+      - http:
+          path: sms/send
+          method: post
+          cors: true
+
+  sendWhatsapp:
+    handler: src/lambda-handlers.handleSendWhatsapp
+    timeout: 30
+    events:
+      - http:
+          path: whatsapp/send
+          method: post
+          cors: true
+
+  aiParse:
+    handler: src/lambda-handlers.handleAiParse
+    timeout: 120 # PDF Parsing can take longer
+    memorySize: 1024 # More memory for processing files
+    events:
+      - http:
+          path: ai/parse
+          method: post
+          cors: true
+
+  vectorMatch:
+    handler: src/lambda-handlers.handleVectorMatch
+    timeout: 30
+    events:
+      - http:
+          path: vector/match
+          method: post
+          cors: true
+
+  telegramReport:
+    handler: src/lambda-handlers.handleTelegramReport
+    timeout: 15
+    events:
+      - http:
+          path: telegram/report
+          method: post
+          cors: true
