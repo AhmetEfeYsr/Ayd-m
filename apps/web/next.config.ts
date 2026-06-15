@@ -1,0 +1,15 @@
+import withSerwistInit from "@serwist/next";
+import type { NextConfig } from "next";
+
+const withSerwist = withSerwistInit({
+  swSrc: "src/app/sw.ts",
+  swDest: "public/sw.js",
+});
+
+const nextConfig: NextConfig = {
+  transpilePackages: ["@yks-platform/cloud", "@yks-platform/database"],
+  turbopack: {},
+  /* Diğer Next.js ayarlarınız buraya gelecek */
+};
+
+export default withSerwist(nextConfig);

@@ -1,0 +1,46 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@serwist/next": "^9.5.7",
+    "@upstash/qstash": "^2.10.1",
+    "@upstash/redis": "^1.37.0",
+    "@yks-platform/cloud": "workspace:*",
+    "@yks-platform/database": "workspace:*",
+    "comlink": "^4.4.2",
+    "drizzle-orm": "^0.40.0",
+    "firebase": "^12.14.0",
+    "firebase-admin": "^13.10.0",
+    "jose": "^6.2.3",
+    "jsonwebtoken": "^9.0.2",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.7",
+    "next": "16.2.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "resend": "^6.12.4",
+    "serwist": "^9.5.7",
+    "svix": "^1.92.2",
+    "xlsx": "^0.18.5",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

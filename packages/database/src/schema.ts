@@ -296,7 +296,7 @@ export const questions = pgTable('questions', {
 export const studentCredits = pgTable('student_credits', {
   id: uuid('id').defaultRandom().primaryKey(),
   studentId: uuid('student_id').references(() => users.id, { onDelete: 'cascade' }).notNull().unique(),
-  balance: real('balance').notNull().default(0), // 10 soru = 1 kredi, küsuratlı olabilir (0.1)
+  balance: real('balance').notNull().default(30), // Yeni hesaplar 30 deneme kredisi ile başlar
   planType: creditPlanEnum('plan_type').default('BASIC').notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull().$onUpdate(() => new Date()),
 });
