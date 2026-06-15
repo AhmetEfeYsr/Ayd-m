@@ -77,7 +77,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json(plan);
   } catch (error: any) {
-    await rollbackAiLimit(studentId, 1, 'STUDY_PLAN', limitCheck.charged || false, 'plan');
+    await rollbackAiLimit(studentId, 2, 'STUDY_PLAN', limitCheck.charged || false, 'plan');
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

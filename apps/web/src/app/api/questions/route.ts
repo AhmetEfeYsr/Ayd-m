@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { db, questions, studentCredits, creditTransactions, users, studentTopicMastery, solvedQuestions } from '@yks-platform/database';
+import { db, questions, studentCredits, creditTransactions, users, studentTopicMastery, solvedQuestions, subjects } from '@yks-platform/database';
 import { eq, sql } from 'drizzle-orm';
 import { getAuthClerkId } from '@/lib/auth';
 import { getPresignedQuestionUrl } from '@yks-platform/cloud';
@@ -88,11 +88,17 @@ export async function GET(request: Request) {
     // Generate a presigned URL so the mobile app can load the image securely
     const imageUrl = await getPresignedQuestionUrl(question.r2StorageKey);
 
+    // Fetch the subject to get its name for mobile client pricing representation
+    const subject = await db.query.subjects.findFirst({
+      where: eq(subjects.id, question.subjectId)
+    });
+
     return NextResponse.json({
       question: {
         id: question.id,
         topicId: question.topicId,
         subjectId: question.subjectId,
+        subjectName: subject?.name || null,
         optionBounds: question.optionBounds,
         imageUrl, // presigned R2 URL — not the raw storage key
       },

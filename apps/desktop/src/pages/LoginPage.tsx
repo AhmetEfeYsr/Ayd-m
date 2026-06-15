@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { updateConfig, getConfig } from "../hooks/useApi";
+import { updateConfig, getConfig, apiRequest } from "../hooks/useApi";
 import BrandLogo from "../components/BrandLogo";
 
 interface LoginPageProps {
@@ -34,25 +34,13 @@ export default function LoginPage({ onLogin, theme }: LoginPageProps) {
         watch_path: currentConfig.watch_path || "",
       });
 
-      // 2. Sunucuya login isteği gönder
-      const response = await fetch(`${endpoint}/api/auth/desktop`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email,
-          password,
-          tenantId: selectedTenantId || undefined,
-          role: selectedRole || undefined,
-        }),
+      // 2. Sunucuya login isteğini Rust üzerinden gönder (CSP engellerini aşmak için)
+      const data: any = await apiRequest("POST", "/api/auth/desktop", {
+        email,
+        password,
+        tenantId: selectedTenantId || undefined,
+        role: selectedRole || undefined,
       });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        setError(data.error || "Giriş başarısız");
-        setLoading(false);
-        return;
-      }
 
       // 3. Çoklu hesap seçimi gerekiyorsa
       if (data.requiresSelection) {
@@ -70,7 +58,25 @@ export default function LoginPage({ onLogin, theme }: LoginPageProps) {
 
       onLogin();
     } catch (err: any) {
-      setError("Sunucuya bağlanılamadı. Lütfen sunucu adresini kontrol edin.");
+      console.error("Login error:", err);
+      let errMsg = "Sunucuya bağlanılamadı. Lütfen sunucu adresini kontrol edin.";
+      if (typeof err === "string" && err.startsWith("HTTP ")) {
+        const parts = err.split(":");
+        if (parts.length >= 2) {
+          const jsonStr = parts.slice(1).join(":").trim();
+          try {
+            const parsed = JSON.parse(jsonStr);
+            if (parsed && parsed.error) {
+              errMsg = parsed.error;
+            }
+          } catch {
+            errMsg = jsonStr || errMsg;
+          }
+        }
+      } else if (err?.message) {
+        errMsg = err.message;
+      }
+      setError(errMsg);
     }
     setLoading(false);
   };
