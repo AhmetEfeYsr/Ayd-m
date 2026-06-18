@@ -160,7 +160,7 @@ export default function InstitutionSignUpPage() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Sedusis Kurumsal Kayıt (Demo)
+            Aydım Kurumsal Kayıt (Demo)
           </h1>
           <p style={{ color: "#a1a1aa", fontSize: 14, lineHeight: 1.5 }}>
             Ücretsiz demo süresince toplam <strong>30 dershane</strong> kaydı alınacaktır.<br />

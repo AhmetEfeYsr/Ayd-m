@@ -87,7 +87,7 @@ export default function LoginPage({ onLogin, theme }: LoginPageProps) {
         <div className="text-center mb-4 flex-col items-center flex">
           <BrandLogo theme={theme} width={64} height={64} />
           <h1 style={{ fontSize: 24, fontWeight: 800, background: "linear-gradient(135deg, #818cf8, #c084fc)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginTop: 16 }}>
-            Sedusis
+            Aydım
           </h1>
           <p style={{ color: "var(--text-muted)", fontSize: 13, marginTop: 8 }}>Masaüstü OMR Senkronizasyon Girişi</p>
         </div>

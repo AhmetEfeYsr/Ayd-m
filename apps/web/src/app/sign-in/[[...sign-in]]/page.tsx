@@ -140,7 +140,7 @@ export default function SignInPage() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Sedusis
+            Aydım
           </h1>
           <p style={{ color: "var(--text-secondary, #a1a1aa)", fontSize: 14 }}>
             {showSelection ? "Giriş Yapılacak Hesabı Seçin" : "Hesabınıza giriş yapın"}

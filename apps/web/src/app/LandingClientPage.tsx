@@ -69,7 +69,7 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
 
   // Chat simulator state
   const [chatMessages, setChatMessages] = useState<Array<{ sender: "ai" | "user"; text: string }>>([
-    { sender: "ai", text: "Merhaba! Ben Sedusis Yapay Zeka Rehberlik Asistanı. Kurumunuzdaki öğrencilerin gelişim süreçleri, konu eksikleri ve haftalık ders çalışma hedefleri hakkında yardımcı olabilirim. Nasıl başlayabiliriz?" }
+    { sender: "ai", text: "Merhaba! Ben Aydım Yapay Zeka Rehberlik Asistanı. Kurumunuzdaki öğrencilerin gelişim süreçleri, konu eksikleri ve haftalık ders çalışma hedefleri hakkında yardımcı olabilirim. Nasıl başlayabiliriz?" }
   ]);
   const [isTyping, setIsTyping] = useState(false);
 
@@ -81,7 +81,7 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
     setTimeout(() => {
       let answer = "";
       if (question.includes("Yapay Zeka")) {
-        answer = "Sedusis AI, öğrencilerin deneme sınavı sonuçlarındaki konu yanlışlarını MEB kazanım grafiğine göre saniyeler içinde analiz eder. Hangi dersten hangi konuya çalışması gerektiğini belirleyip kişiye özel haftalık çalışma planları oluşturur ve hedefler atar.";
+        answer = "Aydım AI, öğrencilerin deneme sınavı sonuçlarındaki konu yanlışlarını MEB kazanım grafiğine göre saniyeler içinde analiz eder. Hangi dersten hangi konuya çalışması gerektiğini belirleyip kişiye özel haftalık çalışma planları oluşturur ve hedefler atar.";
       } else if (question.includes("Tauri")) {
         answer = "Tauri masaüstü OMR yazılımımız, yerel tarayıcınızdan (scanner) gelen YKS deneme optik formlarını doğrudan bilgisayarınızda okur. İnternet kesilse dahi SQLite önbelleği sayesinde verileri korur ve bağlantı geldiğinde buluta senkronize eder.";
       } else {
@@ -256,7 +256,7 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
                 letterSpacing: "-0.02em",
               }}
             >
-              Sedusis
+              Aydım
             </span>
           </Link>
 
@@ -509,7 +509,7 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
           <span style={{ fontSize: 12, fontWeight: 700, color: "#a78bfa", textTransform: "uppercase", letterSpacing: "0.08em" }}>Canlı Deneyim</span>
           <h2 style={{ fontSize: 32, fontWeight: 800, color: "#fafafa", marginTop: 8, marginBottom: 12 }}>Rehberlik Asistanını Şimdi Deneyin</h2>
           <p style={{ color: "#a1a1aa", fontSize: 15, maxWidth: 600, margin: "0 auto" }}>
-            Aşağıdaki hazır sorulardan birine tıklayarak Sedusis AI asistanının gerçek zamanlı olarak nasıl yanıtlar verdiğini inceleyin.
+            Aşağıdaki hazır sorulardan birine tıklayarak Aydım AI asistanının gerçek zamanlı olarak nasıl yanıtlar verdiğini inceleyin.
           </p>
         </div>
 
@@ -517,7 +517,7 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
           <div className="chat-header">
             <div className="chat-avatar">🤖</div>
             <div style={{ flex: 1 }}>
-              <div style={{ fontWeight: 600, fontSize: 14, color: "#fafafa" }}>Sedusis AI Rehberlik Modülü</div>
+              <div style={{ fontWeight: 600, fontSize: 14, color: "#fafafa" }}>Aydım AI Rehberlik Modülü</div>
               <div style={{ fontSize: 11, color: "#a1a1aa", display: "flex", alignItems: "center", gap: 6, marginTop: 2 }}>
                 <span className="chat-status-dot"></span> Çevrimiçi • Öğrenci Eksik Analiz Motoru
               </div>
@@ -564,7 +564,7 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
             <span style={{ fontSize: 13, fontWeight: 700, color: "#c084fc", textTransform: "uppercase" }}>Biz Kimiz?</span>
             <h2 style={{ fontSize: 32, fontWeight: 800, color: "#fafafa", lineHeight: 1.25 }}>Eğitim Teknolojilerinde Yeni Nesil Standart</h2>
             <p style={{ color: "#a1a1aa", fontSize: 15, lineHeight: 1.6 }}>
-              Sedusis, eğitim kurumlarının operasyonel yüklerini tamamen azaltırken öğrencilerin sınav başarısını en üst düzeye çıkarmayı amaçlayan, bulut ve yapay zeka odaklı modern bir eğitim yönetim sistemidir.
+              Aydım, eğitim kurumlarının operasyonel yüklerini tamamen azaltırken öğrencilerin sınav başarısını en üst düzen düzeyine çıkarmayı amaçlayan, bulut ve yapay zeka odaklı modern bir eğitim yönetim sistemidir.
             </p>
             <p style={{ color: "#a1a1aa", fontSize: 15, lineHeight: 1.6 }}>
               Zero-Knowledge (Sıfır Bilgi) şifreleme yöntemlerimiz sayesinde, öğrenci ve velilerinizin tüm verileri (KVKK uyumlu olarak) veritabanında uçtan uca şifreli olarak depolanır ve korunur. Yüksek güvenlikli ve hız sınırlandırmalı altyapımızla kesintisiz hizmet sunuyoruz.
@@ -644,7 +644,7 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
             İlk 30 Kuruma Özel Ücretsiz Demo
           </h2>
           <p style={{ color: "#a1a1aa", fontSize: 16, maxWidth: 650, margin: "0 auto", lineHeight: 1.6 }}>
-            Sedusis bulut altyapısıyla optik okuma, yapay zeka rehberliği, yoklama ve veli iletişim ağını lansman öncesi ücretsiz test edin. Sistem geneli limit 30.000 öğrencidir.
+            Aydım bulut altyapısıyla optik okuma, yapay zeka rehberliği, yoklama ve veli iletişim ağını lansman öncesi ücretsiz test edin. Sistem geneli limit 30.000 öğrencidir.
           </p>
         </div>
 
@@ -653,7 +653,7 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
           {/* Box 1: Limits */}
           <div className="pricing-card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", position: "relative" }}>
             <div>
-              <h3 style={{ fontSize: 20, fontWeight: 700, color: "#fafafa", marginBottom: 12 }}>Sedusis Kurumsal (Demo)</h3>
+              <h3 style={{ fontSize: 20, fontWeight: 700, color: "#fafafa", marginBottom: 12 }}>Aydım Kurumsal (Demo)</h3>
               <p style={{ color: "#a1a1aa", fontSize: 13, minHeight: 40 }}>Eğitim kurumu yönetiminde ihtiyacınız olan tüm temel ve gelişmiş modüller demo süresince tamamen ücretsiz.</p>
               
               <div style={{ margin: "24px 0" }}>
@@ -736,19 +736,19 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
           <span style={{ fontSize: 12, fontWeight: 700, color: "#a78bfa", textTransform: "uppercase", letterSpacing: "0.08em" }}>Destek & Bilgi</span>
           <h2 style={{ fontSize: 32, fontWeight: 800, color: "#fafafa", marginTop: 8, marginBottom: 12 }}>Sıkça Sorulan Sorular</h2>
           <p style={{ color: "#a1a1aa", fontSize: 15 }}>
-            Sedusis platformu hakkında en çok merak edilen konuları derledik.
+            Aydım platformu hakkında en çok merak edilen konuları derledik.
           </p>
         </div>
 
         <div>
           <div className="faq-accordion">
             <div className="faq-accordion-header" onClick={() => setOpenFaq(openFaq === 0 ? null : 0)}>
-              <h4>1. Sedusis Kurumsal Paket kurulum süreci ne kadar sürmektedir?</h4>
+              <h4>1. Aydım Kurumsal Paket kurulum süreci ne kadar sürmektedir?</h4>
               <span className={`faq-arrow ${openFaq === 0 ? "open" : ""}`} style={{ fontSize: 18 }}>▼</span>
             </div>
             {openFaq === 0 && (
               <div className="faq-accordion-content">
-                Sedusis kurumsal yönetim sistemine geçiş süreci tamamen bulut tabanlı olduğu için anında başlar. Kurum kaydınızı yaptıktan sonra Tauri OMR masaüstü programını indirip bilgisayarınıza kurabilir ve yerel tarayıcınızla bağlayarak aynı gün içerisinde deneme sınavlarınızı okutmaya başlayabilirsiniz.
+                Aydım kurumsal yönetim sistemine geçiş süreci tamamen bulut tabanlı olduğu için anında başlar. Kurum kaydınızı yaptıktan sonra Tauri OMR masaüstü programını indirip bilgisayarınıza kurabilir ve yerel tarayıcınızla bağlayarak aynı gün içerisinde deneme sınavlarınızı okutmaya başlayabilirsiniz.
               </div>
             )}
           </div>
@@ -772,7 +772,7 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
             </div>
             {openFaq === 2 && (
               <div className="faq-accordion-content">
-                Hayır. Sedusis, bildirim gönderimlerinden komisyon veya ek ücret almaz. Kurum yöneticisi paneli üzerinden kendi Netgsm kullanıcı bilgilerini veya WhatsApp Cloud API anahtarlarını sisteme bağlar. Gönderim maliyetleri doğrudan kendi operatör anlaşmanız üzerinden karşılanır.
+                Hayır. Aydım, bildirim gönderimlerinden komisyon veya ek ücret almaz. Kurum yöneticisi paneli üzerinden kendi Netgsm kullanıcı bilgilerini veya WhatsApp Cloud API anahtarlarını sisteme bağlar. Gönderim maliyetleri doğrudan kendi operatör anlaşmanız üzerinden karşılanır.
               </div>
             )}
           </div>
@@ -784,7 +784,7 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
             </div>
             {openFaq === 3 && (
               <div className="faq-accordion-content">
-                Sedusis, sıfır bilgi (Zero-Knowledge) güvenlik prensiplerine göre çalışır. Öğrenci, veli ve öğretmenlerin hassas kişisel verileri veritabanında şifrelenmiş olarak saklanır. Sistem yöneticileri dahi sizin izniniz olmadan bu verilere erişemez. Tüm altyapı KVKK mevzuatına tam uyumludur.
+                Aydım, sıfır bilgi (Zero-Knowledge) güvenlik prensiplerine göre çalışır. Öğrenci, veli ve öğretmenlerin hassas kişisel verileri veritabanında şifrelenmiş olarak saklanır. Sistem yöneticileri dahi sizin izniniz olmadan bu verilere erişemez. Tüm altyapı KVKK mevzuatına tam uyumludur.
               </div>
             )}
           </div>
@@ -958,7 +958,7 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                 <BrandLogo width={32} height={32} />
-                <span style={{ fontWeight: 800, fontSize: 18, color: "#fafafa", letterSpacing: "-0.01em" }}>Sedusis</span>
+                <span style={{ fontWeight: 800, fontSize: 18, color: "#fafafa", letterSpacing: "-0.01em" }}>Aydım</span>
               </div>
               <p style={{ color: "#a1a1aa", lineHeight: 1.6 }}>
                 Yapay zeka destekli kurumsal eğitim yönetim sistemi. Tauri OMR entegrasyonu ve anlık veli bilgilendirme altyapısı.
@@ -998,7 +998,7 @@ export default function LandingClientPage({ user }: LandingClientPageProps) {
 
           <div style={{ borderTop: "1px solid rgba(255, 255, 255, 0.04)", paddingTop: 30, display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: 20 }}>
             <div>
-              &copy; {new Date().getFullYear()} Sedusis. Tüm Hakları Saklıdır. KVKK ve Zero-Knowledge Korumalı Altyapı.
+              &copy; {new Date().getFullYear()} Aydım. Tüm Hakları Saklıdır. KVKK ve Zero-Knowledge Korumalı Altyapı.
             </div>
             <div style={{ color: "#71717a", fontSize: 11 }}>
               aydim.com

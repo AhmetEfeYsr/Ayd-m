@@ -37,7 +37,7 @@ export default function Sidebar({ activePage, onNavigate, isOnline, offlineCount
       <div className="sidebar-logo flex items-center gap-3">
         <BrandLogo theme={theme} width={28} height={28} />
         <div>
-          <h1 style={{ margin: 0, fontSize: "16px" }}>Sedusis</h1>
+          <h1 style={{ margin: 0, fontSize: "16px" }}>Aydım</h1>
           <div className="version">OMR Senkronizasyon v0.1.0</div>
         </div>
       </div>

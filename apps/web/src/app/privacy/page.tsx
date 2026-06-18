@@ -44,7 +44,7 @@ export default function PrivacyPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 28, fontSize: 15, lineHeight: 1.7, color: "#d4d4d8" }}>
           <section>
             <p>
-              Sedusis olarak, platformumuzu kullanan tüm kurum ve bireylerin gizlilik haklarını korumayı taahhüt ediyoruz.
+              Aydım olarak, platformumuzu kullanan tüm kurum ve bireylerin gizlilik haklarını korumayı taahhüt ediyoruz.
               Bu Gizlilik Politikası, platformumuzun (web sitesi, Tauri masaüstü uygulaması ve API servisleri)
               kullanımı sırasında elde edilen verilerin türlerini, nasıl saklandığını ve güvenliğinin nasıl sağlandığını açıklamaktadır.
             </p>
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
           <section>
             <h2 style={{ fontSize: 20, fontWeight: 700, color: "#fafafa", marginBottom: 12 }}>2. Sıfır Bilgi (Zero-Knowledge) Mimarisi ve Veri Şifreleme</h2>
             <p>
-              Sedusis, veri gizliliğini tasarımdan itibaren (privacy-by-design) korumak için tasarlanmıştır.
+              Aydım, veri gizliliğini tasarımdan itibaren (privacy-by-design) korumak için tasarlanmıştır.
               Platformumuzda saklanan tüm hassas öğrenci kimlik verileri ve veli irtibat numaraları, veritabanına kaydedilmeden önce
               şifrelenir. Bu şifreleme anahtarları, sisteme siber saldırı düzenlense dahi verilerin çözülmesini ve okunmasını imkansız kılar.
             </p>
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
           <section>
             <h2 style={{ fontSize: 20, fontWeight: 700, color: "#fafafa", marginBottom: 12 }}>3. Çerezler (Cookies) ve Analitik Araçlar</h2>
             <p>
-              Sedusis, yalnızca kullanıcı oturumlarını doğrulamak ve güvenliği sağlamak amacıyla gerekli olan teknik çerezleri (session cookies) kullanır.
+              Aydım, yalnızca kullanıcı oturumlarını doğrulamak ve güvenliği sağlamak amacıyla gerekli olan teknik çerezleri (session cookies) kullanır.
               Platformumuzda kullanıcı hareketlerini takip eden reklam çerezleri veya üçüncü taraf takip kodları bulunmamaktadır.
             </p>
           </section>
@@ -89,7 +89,7 @@ export default function PrivacyPage() {
           <section>
             <h2 style={{ fontSize: 20, fontWeight: 700, color: "#fafafa", marginBottom: 12 }}>5. Değişiklikler</h2>
             <p>
-              Sedusis, gizlilik politikasını platform geliştirmelerine veya yasal mevzuat değişikliklerine uyum sağlamak amacıyla zaman zaman güncelleyebilir.
+              Aydım, gizlilik politikasını platform geliştirmelerine veya yasal mevzuat değişikliklerine uyum sağlamak amacıyla zaman zaman güncelleyebilir.
               Güncellemeler bu sayfada yayınlandığı andan itibaren geçerlilik kazanır.
             </p>
           </section>
@@ -106,7 +106,7 @@ export default function PrivacyPage() {
         {/* Footer */}
         <div style={{ marginTop: 60, borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: 30, textAlign: "center" }}>
           <p style={{ color: "#71717a", fontSize: 14 }}>
-            &copy; {new Date().getFullYear()} Sedusis. Tüm Hakları Saklıdır.
+            &copy; {new Date().getFullYear()} Aydım. Tüm Hakları Saklıdır.
           </p>
         </div>
       </div>

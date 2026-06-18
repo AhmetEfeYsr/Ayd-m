@@ -44,7 +44,7 @@ export default function KvkkPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 28, fontSize: 15, lineHeight: 1.7, color: "#d4d4d8" }}>
           <section>
             <p>
-              <strong>Sedusis</strong> olarak, platformumuzu kullanan eğitim kurumlarının (dershane, okul, etüt merkezleri),
+              <strong>Aydım</strong> olarak, platformumuzu kullanan eğitim kurumlarının (dershane, okul, etüt merkezleri),
               yöneticilerin, öğretmenlerin, öğrencilerin ve velilerin kişisel verilerinin korunmasına büyük önem veriyoruz.
               6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, veri sorumlusu sıfatıyla,
               kişisel verilerinizi aşağıda açıklanan çerçevede ve mevzuata uygun olarak işliyoruz.
@@ -54,9 +54,9 @@ export default function KvkkPage() {
           <section>
             <h2 style={{ fontSize: 20, fontWeight: 700, color: "#fafafa", marginBottom: 12 }}>1. Veri Sorumlusu</h2>
             <p>
-              Sedusis platformu kapsamında işlenen kişisel veriler bakımından, verileri sisteme giren/kaydeden üye eğitim kurumu
+              Aydım platformu kapsamında işlenen kişisel veriler bakımından, verileri sisteme giren/kaydeden üye eğitim kurumu
               <strong> Veri Sorumlusu</strong>, bu verilerin güvenli bir şekilde depolanması, işlenmesi ve yapay zeka analizlerinin
-              yapılması için altyapı sağlayan Sedusis ise <strong>Veri İşleyen</strong> konumundadır.
+              yapılması için altyapı sağlayan Aydım ise <strong>Veri İşleyen</strong> konumundadır.
             </p>
           </section>
 
@@ -86,7 +86,7 @@ export default function KvkkPage() {
           <section>
             <h2 style={{ fontSize: 20, fontWeight: 700, color: "#fafafa", marginBottom: 12 }}>4. Zero-Knowledge (Sıfır Bilgi) ve Güvenlik Altyapımız</h2>
             <p>
-              Sedusis, veri güvenliğini en üst düzeye çıkarmak adına <strong>Zero-Knowledge (Sıfır Bilgi)</strong> mimarisi ile çalışmaktadır.
+              Aydım, veri güvenliğini en üst düzeye çıkarmak adına <strong>Zero-Knowledge (Sıfır Bilgi)</strong> mimarisi ile çalışmaktadır.
               Öğrencilerin sınav sonuçları ve hassas veli iletişim detayları veritabanımızda uçtan uca şifreli (encrypted) olarak depolanır.
               Bu sayede, sistem yöneticilerimiz dahil olmak üzere yetkisiz hiçbir üçüncü taraf verilerinize doğrudan erişemez.
             </p>
@@ -95,7 +95,7 @@ export default function KvkkPage() {
           <section>
             <h2 style={{ fontSize: 20, fontWeight: 700, color: "#fafafa", marginBottom: 12 }}>5. Kişisel Verilerin Aktarılması</h2>
             <p>
-              Sedusis, verilerinizi ticari veya reklam amaçlı olarak üçüncü şahıslarla asla paylaşmaz veya satmaz.
+              Aydım, verilerinizi ticari veya reklam amaçlı olarak üçüncü şahıslarla asla paylaşmaz veya satmaz.
               Verileriniz, yalnızca kurumunuzun entegre ettiği onaylı altyapı sağlayıcıları (Netgsm SMS Gateway, WhatsApp/Meta Business Cloud API)
               ve altyapı sunucularımız üzerinden işlenir. Yasal zorunluluk hallerinde yetkili kamu kurum ve kuruluşları ile paylaşılabilecektir.
             </p>
@@ -114,7 +114,7 @@ export default function KvkkPage() {
         {/* Footer */}
         <div style={{ marginTop: 60, borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: 30, textAlign: "center" }}>
           <p style={{ color: "#71717a", fontSize: 14 }}>
-            &copy; {new Date().getFullYear()} Sedusis. Tüm Hakları Saklıdır.
+            &copy; {new Date().getFullYear()} Aydım. Tüm Hakları Saklıdır.
           </p>
         </div>
       </div>

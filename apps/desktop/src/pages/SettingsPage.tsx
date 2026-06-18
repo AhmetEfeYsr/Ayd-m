@@ -76,7 +76,7 @@ export default function SettingsPage() {
               <thead><tr><th>Modül</th><th>Endpoint</th><th>Metod</th></tr></thead>
               <tbody>
                 {[
-                  ["OMR Sync", "/api/omr/sync", "POST"],
+                  ["OMR Sync", "/api/omr/ingest", "POST"],
                   ["Sınavlar", "/api/exams", "GET/POST"],
                   ["Sınav Sonuçları", "/api/exams/[id]/results", "GET"],
                   ["Öğrenciler", "/api/students", "GET"],

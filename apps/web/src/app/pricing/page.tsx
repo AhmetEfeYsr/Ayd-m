@@ -66,7 +66,7 @@ export default function PricingPage() {
             margin: "0 auto" 
           }}
         >
-          Sedusis Eğitim Kurumu Yönetim Platformu üretim hazırlık aşamasında olup, lansman öncesinde 
+          Aydım Eğitim Kurumu Yönetim Platformu üretim hazırlık aşamasında olup, lansman öncesinde 
           ilk <strong>30 dershaneye</strong> sistem genelinde toplam <strong>30.000 öğrenciye kadar</strong> tamamen ücretsiz sunulmaktadır.
         </p>
       </section>

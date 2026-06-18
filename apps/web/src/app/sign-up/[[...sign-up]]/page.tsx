@@ -119,7 +119,7 @@ export default function SignUpPage() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Sedusis
+            Aydım
           </h1>
           <p style={{ color: "var(--text-secondary, #a1a1aa)", fontSize: 14 }}>
             Öğrenci Hesabı Oluşturun
